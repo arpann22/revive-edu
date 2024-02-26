@@ -193,6 +193,7 @@ jQuery(document).ready(function($) {
       loop: true,
       center: true,
       items: 3,
+      nav: true,
       // margin: auto,
       autoplay: false,
       dots:true,
@@ -208,4 +209,15 @@ jQuery(document).ready(function($) {
         }
       }
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const textElement = document.getElementById("animated-text");
+  const textContent = "Revive Educare Network";
+  
+  for (let i = 0; i < textContent.length; i++) {
+      setTimeout(() => {
+          textElement.innerHTML += textContent[i];
+      }, i * 100); 
+  }
 });

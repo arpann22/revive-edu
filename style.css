@@ -23,7 +23,9 @@ div.container-fluid {
 * {
     font-family: 'Poppins', sans-serif;
 }
-
+a{
+    text-decoration: none !important;
+}
 .gap-10 {
     gap: 10px;
 }
@@ -146,7 +148,12 @@ div.container-fluid {
 }
 
 
-
+#animated-text {
+    font-size: 48px;
+    font-weight: bold;
+    overflow: hidden;
+    /* white-space: nowrap; */
+}
 .search-and-icons form input {
     border-radius: 0;
     height: 2em;
@@ -242,7 +249,7 @@ div.container-fluid {
 .ban_text a {
     display: inline-block;
     font-size: 14px;
-    background: #282828;
+    background: var(--primary1);
     border-radius: 26px;
     color: #fff;
     padding: 12px 28px;
@@ -261,7 +268,7 @@ div.container-fluid {
 
 .ban_text a:hover {
     background-color: #fff;
-    color: #000;
+    color: var(--primary1);
     border: 1px solid;
 
 }
@@ -476,13 +483,15 @@ div.container-fluid {
     text-decoration: none;
     border-radius: 50px;
     background: #fff;
-    color: #000;
+    color: var(--primary1);
     font-weight: 600;
+    font-size: 12px;
 }
 
 .studyin li a:hover {
-    background-color: #000;
+    background-color: var(--primary1);
     color: #fff;
+    border: 1px solid;
 
 }
 
@@ -1250,19 +1259,7 @@ div.container-fluid {
     font-weight: 500;
     color: #000;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* testimonial */
 
 .shadow-effect {
 	background: #fff;
@@ -1334,9 +1331,25 @@ div.container-fluid {
 	transition: all 250ms ease-out 0s;
 	width: 20px;
 }
+#customers-testimonials .owl-stage-outer{
+    overflow: hidden;
+}
 .owl-stage{
     display: flex;
 }
 .owl-prev, .owl-next{
     display: none;
+}
+#customers-testimonials{
+    position: relative;
+}
+#customers-testimonials .owl-nav .owl-prev{
+    position: absolute;
+    top: 50%;
+}
+#customers-testimonials .owl-nav .owl-next{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    content: '\F133';
 }
