@@ -351,7 +351,7 @@ a{
     }
 }
 
-.studyin {
+/* .studyin {
     padding-top: 4rem;
 }
 
@@ -396,10 +396,10 @@ a{
             calc(100% + var(--col-gap) / 2 + 5px) calc(100% - var(--flapH)),
             50% 100%,
             calc(var(--col-gap) / -2 - 5px) calc(100% - var(--flapH)));
-}
+} */
 
 /* bar */
-.studyin ul li::before {
+/* .studyin ul li::before {
     content: "";
     grid-area: role;
     height: var(--barH);
@@ -414,10 +414,10 @@ a{
             rgba(0, 0, 0, 0.1) 60%,
             rgba(0, 0, 0, 0.2) 70%,
             rgba(0, 0, 0, 0.4));
-}
+} */
 
 /* role */
-.studyin ul li::after {
+/* .studyin ul li::after {
     content: "";
     grid-area: role;
     background: var(--accent-color);
@@ -493,7 +493,7 @@ a{
     color: #fff;
     border: 1px solid;
 
-}
+} */
 
 /* quote */
 .quote-content {
@@ -520,7 +520,7 @@ a{
 
 
 
-.card-big-shadow {
+/* .card-big-shadow {
     max-width: 320px;
     position: relative;
 }
@@ -631,7 +631,7 @@ a{
 .our-features a:hover,
 .our-features a:focus {
     text-decoration: none;
-}
+} */
 
 /*======== COLORS ===========*/
 .our-features .card[data-color="blue"] {
@@ -731,12 +731,33 @@ a{
     background-color: var(--primary1);
     color: #fff;
 }
-
-.revive-faq .accordion-button.collapsed::after {
-    content: '\F282';
-    font-family: 'bootstrap-icons';
+.revive-faq .accordion-button:focus{
+    box-shadow: none;
 }
-
+.revive-faq .accordion-button.collapsed::after {
+    content: '+';
+    /* font-family: 'bootstrap-icons'; */
+    background-image: none;
+    font-size: 24px;
+    height: auto;
+}
+.revive-faq .accordion-button:not(.collapsed):after {
+    content: '-';
+    /* font-family: 'bootstrap-icons'; */
+    background-image: none;
+    font-size: 24px;
+    height: auto;
+}
+.revive-faq .accordion-item{
+    margin-top: 10px;
+    border-radius: 0;
+}
+.revive-faq .accordion-item .accordion-header button.accordion-button { 
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
 /* footer */
 .footer-section {
     /* background: #151414; */
@@ -1291,7 +1312,7 @@ a{
 	text-align: center;
 	padding: 50px;
 	margin-bottom: 80px;
-	opacity: 0.2;
+	/* opacity: 0.2; */
 	-webkit-transform: scale3d(0.8, 0.8, 1);
 	transform: scale3d(0.8, 0.8, 1);
 	-webkit-transition: all 0.3s ease-in-out;
@@ -1337,19 +1358,301 @@ a{
 .owl-stage{
     display: flex;
 }
-.owl-prev, .owl-next{
+/* .owl-prev, .owl-next{
     display: none;
-}
+} */
 #customers-testimonials{
     position: relative;
 }
 #customers-testimonials .owl-nav .owl-prev{
     position: absolute;
-    top: 50%;
+    top: 40%;
+    color: transparent;
 }
 #customers-testimonials .owl-nav .owl-next{
     position: absolute;
-    top: 50%;
+    top: 40%;
     right: 0;
-    content: '\F133';
+    color: transparent;
 }
+#customers-testimonials .owl-nav .owl-next::after{
+    content: '\F285' ;
+    font-family: 'bootstrap-icons';
+    color: var(--primary1);
+    font-size: 20px;
+}
+#customers-testimonials .owl-nav .owl-prev::after{
+    content: '\F284' ;
+    font-family: 'bootstrap-icons';
+    color: var(--primary1);
+    font-size: 20px;
+}
+
+
+
+/* countries */
+.studyin h2 span{
+    color: var(--primary1);
+}
+.studyin .card {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+  .studyin .row{
+    row-gap: 20px;
+  }
+  .studyin  .card {
+    margin-top: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-clip: padding-box;
+    min-height:275px;
+  }
+  
+  .studyin  .card span.card-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  
+  .studyin  .card .card-image {
+    position: relative;
+    overflow: hidden;
+    max-height: 180px;
+    height: 100%;
+  }
+  
+  .studyin  .card .card-image img {
+    border-radius: 20px 20px 0 0;
+    background-clip: padding-box;
+    position: relative;
+    width: 100%;
+    object-fit: cover;height:180px;
+  }
+  
+  .studyin  .card .card-image span.card-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+  }
+  
+  .studyin .card-content {
+    padding: 16px;
+    padding-bottom: 0;
+    border-radius: 0 0 2px 2px;
+    background-clip: padding-box;
+    box-sizing: border-box;
+  }
+  
+  .studyin .card-content h5{
+    color: var(--secondary1);
+  }
+  .studyin  .card .card-content span.card-title {
+    line-height: 48px;
+  }
+  
+  .studyin  .card .card-action {
+    /* border-top: 1px solid rgba(160, 160, 160, 0.2); */
+    padding: 16px;
+    padding-top: 0;
+  }
+  
+  .studyin  .card .card-action a {
+    color: #ffab40;
+    font-size: 12px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    color: var(--primary1);
+    font-weight: 600;
+  }
+  .studyin .card-action i{
+    color: var(--primary1);
+  }
+  .studyin  .card .card-action a:hover {
+    color:var(--secondary1);
+    text-decoration: none;
+  }
+
+
+  /* why choose us */
+  .our-features .newsCard {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #fff;
+    color:#fff;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+  
+  .our-features figure img {
+  display: block;
+  object-fit: cover !important;
+  object-position: center center !important; height: 100%;
+  width: 100%;
+  }
+  
+  .our-features .overlay{
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#281a36",endColorstr="#593b74",GradientType=1);
+    display: block;
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    bottom: 0;
+    z-index: 3;
+  }
+  
+  .our-features .newsCaption {
+    position: absolute;
+    top: auto;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    padding: 0;
+    -webkit-transform: translateY(80%);
+    transform: translateY(85%);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition:  -webkit-transform 0.4s;
+    transition:  -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s,  -webkit-transform 0.4s;
+    background-color: #045fa9e3
+  }
+  .our-features .newsCaption .cnt-title{
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .our-features .newsCaption i{font-size: 24px;}
+  
+  .our-features .newsCaption-title {
+    margin-top: 0px;
+  }
+  .our-features .newsCaption-content {
+    margin: 0;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .our-features .newsCaption-link {
+    color: #fff;
+    text-decoration: underline;
+    opacity: .8;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 0.15s;
+            transition-duration: 0.15s;
+    -webkit-transition-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
+            transition-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
+  }
+
+  .our-features .news-Slide-up:hover .newsCaption {
+  
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-transition:  -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s;
+  }
+  .our-features .newsCaption-title img{
+    max-width: 50px;
+  }
+
+/* partnership */
+.partners-logo img{
+    max-width: 200px;
+}
+.partners-logo{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+  /* Contact form */
+  .revive-contact .form-wrapper h2{
+    color: var(--primary1);
+    font-weight: 600;
+  }
+  .revive-contact .row{
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  .revive-contact form input, .revive-contact form textarea{
+    margin: 5px 0;
+    padding: 16px 15px;
+    background-color: #f9f9f9;
+    border: 0;
+  }
+  .revive-contact form input::placeholder{
+    font-size: 14px;
+  }
+  .revive-contact form #email, .revive-contact form #message{
+    width: 100%;
+  }
+  .revive-contact form #name, .revive-contact form #phone{
+    width: calc(50% - 8px);
+  }
+  .revive-contact .form-contacts{
+    background-color: var(--primary1);
+    padding: 100px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  .revive-contact .form-contacts p,
+  .revive-contact .form-contacts h5
+  {
+    margin-bottom: 0;
+  }
+  .revive-contact .form-contacts div{
+    display: flex;
+    gap: 20px;
+  }
+  .revive-contact .form-wrapper{
+    padding: 40px 60px;
+  }
+
+
+
+  @media screen and (max-width: 767px) {
+    .container{
+        margin: 1rem 0;
+    }
+    #myNavbar .justify-content-end{
+        justify-content: space-between !important;
+    }
+    .social-contact-info{
+        display: flex;
+    }
+    #animated-text{
+        font-size: 32px;
+    }
+
+    .ban_img{
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .ban_img img{
+        border-radius: 20px;
+        width: 100%;
+    }
+    .quote-content p{
+        padding: 20px;
+    }
+    .revive-contact .form-wrapper, .revive-contact .form-contacts{
+        padding: 20px;
+    }
+    #counter{
+        position: unset;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #customers-testimonials .item{
+        padding: 20px;
+    }
+  }
