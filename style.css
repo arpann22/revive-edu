@@ -1245,12 +1245,12 @@ a{
     width: 100%;
     background-color: transparent;
     position: absolute;
-    top: 25rem;
+    top: 27rem;
 }
 
 #counter .item {
     /* background: #fff; */
-    width: 300px;
+    /* width: 300px; */
     padding: 35px 40px;
     margin: 10px;
     text-align: center;
@@ -1259,11 +1259,17 @@ a{
     -moz-box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 0.34);
     box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 0.34); */
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     padding: 0;
+    gap: 20px;
+    align-items: center;
+    width: calc(25% - 20px);
 }
-
+#counter span img{
+    width: 60px;
+    height: 60px;
+}
 #counter .item .count {
     /* color: #e8b12d; */
     margin-bottom: 5px;
@@ -1368,12 +1374,14 @@ a{
     position: absolute;
     top: 40%;
     color: transparent;
+    cursor: pointer;
 }
 #customers-testimonials .owl-nav .owl-next{
     position: absolute;
     top: 40%;
     right: 0;
     color: transparent;
+    cursor: pointer;
 }
 #customers-testimonials .owl-nav .owl-next::after{
     content: '\F285' ;
@@ -1522,11 +1530,25 @@ a{
     transition: transform 0.4s,  -webkit-transform 0.4s;
     background-color: #045fa9e3
   }
+  .our-features .newsCaption svg,
+  .our-features .newsCaption svg path:not(.our-features  .row .col-lg-3:nth-child(1) path)
+  {
+    width: 30px;
+    fill: #fff;
+  }
+  .our-features .newsCaption h5{
+    margin-bottom: 0;
+  }
   .our-features .newsCaption .cnt-title{
     padding: 10px;
-    justify-content: center;
+    justify-content: start;
   }
-
+.our-features .url-box:hover .newsCaption{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
   .our-features .newsCaption i{font-size: 24px;}
   
   .our-features .newsCaption-title {
@@ -1590,10 +1612,13 @@ a{
   .revive-contact form input::placeholder{
     font-size: 14px;
   }
-  .revive-contact form #email, .revive-contact form #message{
+  .revive-contact form #email, .revive-contact form #message,
+  .revive-contact form #email, .revive-contact form #phone
+  {
     width: 100%;
   }
-  .revive-contact form #name, .revive-contact form #phone{
+  .revive-contact form #name, .revive-contact form #first-name,
+  .revive-contact form #name, .revive-contact form #last-name{
     width: calc(50% - 8px);
   }
   .revive-contact .form-contacts{
@@ -1602,7 +1627,9 @@ a{
     color: #fff;
     display: flex;
     flex-direction: column;
-    gap: 36px;
+    gap: 72px;
+    justify-content: center;
+    height: 650px;
   }
   .revive-contact .form-contacts p,
   .revive-contact .form-contacts h5
@@ -1612,9 +1639,13 @@ a{
   .revive-contact .form-contacts div{
     display: flex;
     gap: 20px;
+    align-items: center;
   }
   .revive-contact .form-wrapper{
     padding: 40px 60px;
+  }
+  .revive-contact .form-contacts i::before{
+    font-size: 32px;
   }
 
 
