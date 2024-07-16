@@ -183,8 +183,8 @@ a {
 
 .rev-nav .nav-item a.nav-link {
   color: var(--main);
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 12px;
 }
 
 /* .rev-nav .navbar-nav {
